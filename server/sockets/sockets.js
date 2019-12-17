@@ -22,7 +22,7 @@ io.on('connection',(client)=> {
         }*/
 
         
-        client.broadcast.emit('newMessage',data); //broadcast envia a todos
+        client.broadcast.emit('enviarMensaje',data); //broadcast envia a todos
     })
 
     // enviar al cliente
