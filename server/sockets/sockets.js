@@ -10,6 +10,9 @@ io.on('connection',(client)=> {
     //escuchar el cliente
 
     client.on('enviarMensaje',(data,callback)=>{
+
+
+        client.broadcast.emit('mensajeServidor',data); //broadcast envia a todos
         console.log(data);
         /*if(mensaje.usuario){
             callback({
@@ -22,7 +25,7 @@ io.on('connection',(client)=> {
         }*/
 
         
-        client.broadcast.emit('enviarMensaje',data); //broadcast envia a todos
+        
     })
 
     // enviar al cliente
